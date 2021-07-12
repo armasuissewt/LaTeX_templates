@@ -1,0 +1,154 @@
+\ProvidesPackage{beamerthemearmasuisseST}  % this style is a modification by Alessio Vaghi of the style beamerthemeI6pd2 created by Thomas Deselaers and Philippe Dreuw 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{armasuisseSTcolors}
+\selectcolormodel{cmyk}
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamercolor{headline}{fg=mycolor1,bg=white}
+\setbeamercolor{footline}{fg=mycolor1,bg=white}
+\setbeamerfont{footline}{size=\normalsize,series=\sffamily}
+\setbeamercolor{separation line}{bg=mycolor2}
+\setbeamercolor{title in headline}{fg=mycolor1}
+\setbeamercolor{author in headline}{fg=mycolor2}
+\setbeamercolor{institute in headline}{fg=mycolor2}
+
+\setbeamercolor{framesubtitle}{fg=mycolor2, bg=mycolor3}
+\setbeamercolor{author in head/foot}{fg=mycolor2, bg=mycolor3}
+\setbeamercolor{title in head/foot}{fg=mycolor2, bg=white}
+
+\setbeamercolor*{normal text}{fg=black, bg=mycolor3}
+\setbeamercolor*{block body}{bg=mycolor3,fg=black}
+\setbeamercolor*{block title}{fg=black,bg=mycolor3} %
+% \setbeamerfont{block title}{size=\large,series=\bfseries} % bold
+\setbeamerfont{block title}{size=\large,series=\slshape} % italic
+\setbeamerfont{block body}{size=\normalfont} 
+\setbeamercolor{upper separation line head}{fg=mycolor3}
+
+\setbeamercolor*{example body}{fg=mycolor3,bg=white}
+\setbeamercolor*{example text}{fg=black,bg=white}
+\setbeamercolor*{example title}{fg=black,bg=mycolor2}
+
+\setbeamerfont{block title example}{size=\large,series=\slshape} % italic
+%\setbeamercolor{alerted text}{fg=red}
+
+\setbeamercolor{structure}{fg=mycolor2}
+
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \vskip.75ex
+  \begin{beamercolorbox}[ht=4ex,dp=0.0ex,center,leftskip=-1em,colsep*=.75ex]{block title}%
+    \usebeamerfont*{block title}%
+    {\phantom{G}\insertblocktitle}% phantom because of baseline problem
+  \end{beamercolorbox}%
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[leftskip=1em,colsep*=.75ex,sep=0.5ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+  
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+  \leavevmode
+  \begin{beamercolorbox}[wd=\paperwidth]{headline}    
+    \begin{columns}[T]
+      \begin{column}{.025\paperwidth}
+      \end{column}
+      \begin{column}{.25\paperwidth}
+         \includegraphics[height=.0675\paperwidth]{layout/Logo_der_Schweizerischen_Eidgenossenschaft}
+      \end{column}
+      \begin{column}{.025\paperwidth}
+      \end{column}
+      \begin{column}{.4\paperwidth}      	      	
+        {
+        \vskip6ex       
+        \centering %\raggedright
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[1ex]}
+%       \usebeamercolor{author in headline}{\color{fg}\Large{\insertauthor}\\[1ex]}
+        \usebeamercolor{institute in headline}{\color{fg}\Large{\insertinstitute}\\[1ex]}
+%        \usebeamercolor{institute in headline}{\color{fg}\large{\insertdate}\\[1ex]}
+        }                
+      \end{column}
+%        \begin{column}{.05\paperwidth}
+%        \end{column}
+      \begin{column}{.3\paperwidth}   
+      	{\vskip-1.75ex	
+        \includegraphics[width=.3\paperwidth,height=.08\paperwidth]{layout/arST_head_crop_blur.png}
+	    }    
+      \end{column}     
+    \end{columns}
+     \vskip-2.375ex
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
+    \rule{0pt}{1pt}
+  \end{beamercolorbox}
+\vskip0ex
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamertemplate{footline}{
+\begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}
+    \rule{1pt}{1pt}
+\end{beamercolorbox}
+\vskip0.075ex 
+
+\leavevmode%
+\begin{beamercolorbox}[ht=3.5ex,dp=1ex,wd=0.2\paperwidth]{author in head/foot}%      	
+	\phantom{M}\leftfoot              
+	\vskip0.5ex
+\end{beamercolorbox}
+\begin{beamercolorbox}[ht=2ex,wd=0.6\paperwidth]{author in head/foot}%      	
+	\includegraphics[width=0.6\paperwidth,height=4.5ex]{layout/arST_band_blur.png}    
+	\vskip-1.ex   
+\end{beamercolorbox}	
+\begin{beamercolorbox}[ht=3.5ex,dp=1ex,wd=0.2\paperwidth]{author in head/foot}%	
+	\hfill\rightfoot\phantom{M} %\texttt{\rightfoot}
+    \vskip0.25ex
+\end{beamercolorbox}
+\vskip0pt%
+%\begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+%	\rule{0pt}{3pt}
+%\end{beamercolorbox}
+
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Display a grid to help align images ... and it looks nice with this color scheme
+\beamertemplategridbackground[1cm]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mode<all>
+
+% adapt height of imtemize rectangles
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{itemize item}{\raisebox{0.12ex}{$\bullet$}\hskip0.1em}
+\setbeamertemplate{itemize subitem}{\raisebox{0.12ex}{$\circ$}\hskip0.1em}
+% or define your own template using \defbeamertemplate{itemize item}, see beameruserguide.pdf
+
+% equal font sizes for all levels
+\setbeamerfont{itemize/enumerate body}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize}
+\setbeamerfont{itemize/enumerate subsubbody}{size=\normalsize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-PDF-mode: t
+%%% TeX-master: "poster-surf"
+%%% End: 
+
+% set bibliography style
+\setbeamertemplate{bibliography item}[text]
+\setbeamercolor{bibliography item}{fg=black,bg=white}
+\setbeamercolor{bibliography entry author}{fg=black,bg=white}
+\setbeamercolor{bibliography item}{fg=mycolor2,bg=white}
