@@ -1,2 +1,2 @@
-# LaTeX_templates
-Templates of armasuisse S+T in LaTeX
+# LaTeX templates
+LaTeX templates of armasuisse S+T
