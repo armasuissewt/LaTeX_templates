@@ -16,10 +16,11 @@ The repository contains:
 To use the template, the following packages are necessary: 
 - <code>beamer</code>
 - <code>babel</code>
-- <code>amsmath</code>, <code>amsthm</code>, <code>amssymb</code>, <code>latexsym</code>
+- <code>amsmath</code>, <code>amsthm</code>, <code>amssymb</code>
+- <code>latexsym</code>
 - <code>booktabs</code>
 
-You can directly download these packages from <a href="https://www.ctan.org/pkg" title="CTAN">CTAN</a> and install them according to these <a href="https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages" title="instructions">instructions</a>.
+You can directly download these packages from <a href="https://www.ctan.org/pkg" title="CTAN">CTAN</a> and install them following these <a href="https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages" title="instructions">instructions</a>.
 
 # License
 The file <code>beamerposter.sty</code> is distributed under the LaTeX Project Public License and/or GNU public License.
